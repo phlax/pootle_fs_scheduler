@@ -1,0 +1,50 @@
+
+
+conflict_untracked
+  - add --force
+  - fetch --force
+
+pootle_ahead
+  - push
+  - fetch --force? 
+
+pootle_untracked
+  - add, push
+  - pull --prune
+
+pootle_added
+  - push
+
+pootle_removed
+  - pull --prune
+  - fetch --force, pull
+
+fs_added
+  - pull
+
+fs_ahead
+  - pull
+  - add --force?
+
+fs_untracked
+  - push --prune
+  - add --force, push
+
+fs_removed
+  - push --prune
+  - add --force, push
+
+---------------
+
+Possible new commands
+
+  - rm 
+       Stage file and/or Store for removal
+  - unstage
+       Remove conflict resolution for store_fs
+
+
+Possible new behaviour
+
+  - `add/fetch --force` will stage the old version from other side
+
